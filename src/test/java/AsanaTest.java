@@ -12,4 +12,12 @@ public class AsanaTest extends TestBase{
             then()
                 .statusCode(200);
     }
+
+    @Test
+    public void shouldGetListOfProjects() {
+        when()
+                .get("https://app.asana.com/api/1.0/projects/").
+                then()
+                .statusCode(200);
+    }
 }
